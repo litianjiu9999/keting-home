@@ -1,0 +1,35 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "tv.keting.home"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "tv.keting.home"
+        minSdk 21
+        targetSdk 34
+        versionCode 15
+        versionName "1.2.5"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+    }
+
+    androidResources {
+        noCompress += ["jpg"]
+    }
+}

@@ -1,0 +1,522 @@
+{
+  "launcher": {
+    "package": "tv.keting.home",
+    "activity": "tv.keting.home/.HomeActivity",
+    "name": "客厅净桌面"
+  },
+  "animationScale": "0.5",
+  "device": {
+    "name": "客厅的小米电视",
+    "product": "MiTV",
+    "size": "55 英寸",
+    "resolution": "3840×2160",
+    "cpu": "四核",
+    "memoryLabel": "机身存储 8GB",
+    "storageLabel": "闪存 8GB",
+    "os": "Android",
+    "oem": "SDMC",
+    "license": "GITV 银河互联网电视",
+    "network": "家里的无线网",
+    "host": "192.168.1.100"
+  },
+  "dock": [
+    {
+      "id": "bilibili",
+      "label": "哔哩哔哩",
+      "storeName": "云视听小电视",
+      "subtitle": "电视版。应用商店里搜「云视听小电视」",
+      "color": "#FB7299",
+      "packages": ["com.xiaodianshi.tv.yst", "tv.danmaku.bili", "com.bilibili.tv"],
+      "apk": "apks/bilibili.apk"
+    },
+    {
+      "id": "youku",
+      "label": "优酷",
+      "storeName": "酷喵",
+      "subtitle": "电视版叫酷喵，优酷和 CIBN 的大屏客户端",
+      "color": "#1CB5E0",
+      "packages": ["com.cibn.tv", "com.youku.tv", "com.youku.phone"],
+      "apk": "apks/youku.apk"
+    },
+    {
+      "id": "yangshipin",
+      "label": "央视频",
+      "storeName": "央视频",
+      "subtitle": "电视版由未来电视出品，商店里搜「央视频」或 YSPTV",
+      "color": "#E23D3D",
+      "packages": ["com.newtv.cboxtv", "com.cctv.yangshipin", "cn.cntvhd"],
+      "apk": "apks/yangshipin.apk"
+    }
+  ],
+  "groups": [
+    {
+      "id": "ads",
+      "title": "广告和推荐",
+      "blurb": "开机广告、主页推荐行、悬浮活动。停用之后主页不再刷这些内容。"
+    },
+    {
+      "id": "telemetry",
+      "title": "统计上报",
+      "blurb": "只停统计进程。账号、播放和投屏不在这里。"
+    },
+    {
+      "id": "preload",
+      "title": "用不到的预装",
+      "blurb": "演示、游戏中心、国外助手。视频会员和输入法不在这里。"
+    },
+    {
+      "id": "home",
+      "title": "原来的桌面",
+      "blurb": "小米桌面和国际版桌面。新桌面确认能打开之后才停，避免中途黑屏。"
+    },
+    {
+      "id": "overseas",
+      "title": "国外视频应用",
+      "blurb": "默认留着。这套桌面不会新装它们，也不会把它们放进底栏。想停用再勾上。"
+    },
+    {
+      "id": "optional",
+      "title": "可以再停的系统工具",
+      "blurb": "默认留着。系统更新停用后，电视不会自己检查固件。"
+    }
+  ],
+  "disable": [
+    {
+      "package": "com.xiaomi.mitv.advertise",
+      "name": "广告服务",
+      "group": "ads",
+      "reason": "桌面和开机位的广告进程",
+      "default": true
+    },
+    {
+      "package": "com.miui.systemAdSolution",
+      "name": "开机广告",
+      "group": "ads",
+      "reason": "开机时先播一段广告的系统组件",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.mitv.tvpush.tvpushservice",
+      "name": "推送服务",
+      "group": "ads",
+      "reason": "后台推消息，也会把广告拉回来",
+      "default": true
+    },
+    {
+      "package": "com.mitv.tvhome.michannel",
+      "name": "推荐频道",
+      "group": "ads",
+      "reason": "主页上那几排猜你喜欢",
+      "default": true
+    },
+    {
+      "package": "com.mitv.tvhome.mitvplus",
+      "name": "会员推广",
+      "group": "ads",
+      "reason": "会员和活动推广条",
+      "default": true
+    },
+    {
+      "package": "com.xm.webcontent",
+      "name": "活动中心",
+      "group": "ads",
+      "reason": "节日活动和电商专题",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.floatingframe",
+      "name": "悬浮广告",
+      "group": "ads",
+      "reason": "浮在画面上的活动框",
+      "default": true
+    },
+    {
+      "package": "com.duokan.videodaily",
+      "name": "今日头屏",
+      "group": "ads",
+      "reason": "屏保式的内容推荐",
+      "default": true
+    },
+    {
+      "package": "com.mitv.care",
+      "name": "推荐提示",
+      "group": "ads",
+      "reason": "带推荐内容的系统提示",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.mitv.shop",
+      "name": "电视商城",
+      "group": "ads",
+      "reason": "购物推荐",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.tv.gallery",
+      "name": "时尚画报",
+      "group": "ads",
+      "reason": "带广告的画报屏保",
+      "default": true
+    },
+    {
+      "package": "com.miui.tv.analytics",
+      "name": "电视统计",
+      "group": "telemetry",
+      "reason": "使用情况统计",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.statistic",
+      "name": "小米统计",
+      "group": "telemetry",
+      "reason": "行为统计",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.devicereport",
+      "name": "设备上报",
+      "group": "telemetry",
+      "reason": "设备信息上报",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.mibox.gamecenter",
+      "name": "游戏中心",
+      "group": "preload",
+      "reason": "预装游戏入口",
+      "default": true
+    },
+    {
+      "package": "com.google.android.play.games",
+      "name": "Play 游戏",
+      "group": "preload",
+      "reason": "国际版游戏服务，国内机上多半没有",
+      "default": true
+    },
+    {
+      "package": "com.google.android.feedback",
+      "name": "Google 反馈",
+      "group": "preload",
+      "reason": "国际版反馈组件",
+      "default": true
+    },
+    {
+      "package": "com.google.android.apps.tachyon",
+      "name": "Google Duo",
+      "group": "preload",
+      "reason": "国际版通话应用",
+      "default": true
+    },
+    {
+      "package": "fusion.android.tv.demo",
+      "name": "演示模式",
+      "group": "preload",
+      "reason": "卖场循环演示",
+      "default": true
+    },
+    {
+      "package": "android.autoinstalls.config.xiaomi.amelie",
+      "name": "自动安装配置",
+      "group": "preload",
+      "reason": "会自己再装回预装应用",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.amazon.alexa",
+      "name": "Alexa",
+      "group": "preload",
+      "reason": "国外语音助手桥接",
+      "default": true
+    },
+    {
+      "package": "com.google.android.tvrecommendations",
+      "name": "推荐服务",
+      "group": "preload",
+      "reason": "国际版主页的推荐条",
+      "default": true
+    },
+    {
+      "package": "com.google.android.leanbacklauncher.recommendations",
+      "name": "旧推荐服务",
+      "group": "preload",
+      "reason": "更早一版主页的推荐条",
+      "default": true
+    },
+    {
+      "package": "com.mitv.tvhome",
+      "name": "小米桌面",
+      "group": "home",
+      "reason": "现在这块屏幕上的主页。新桌面打开之后才停用",
+      "default": true
+    },
+    {
+      "package": "com.mitv.tvhome.atv",
+      "name": "国际版桌面组件",
+      "group": "home",
+      "reason": "PatchWall 的国际推荐组件",
+      "default": true
+    },
+    {
+      "package": "com.google.android.tvlauncher",
+      "name": "Android TV 桌面",
+      "group": "home",
+      "reason": "国际版默认桌面，装了才会和净桌面抢主页",
+      "default": true
+    },
+    {
+      "package": "com.google.android.apps.tv.launcherx",
+      "name": "Google TV 桌面",
+      "group": "home",
+      "reason": "Google TV 的默认桌面",
+      "default": true
+    },
+    {
+      "package": "com.xiaomi.mitv.tvhome",
+      "name": "小米桌面（另一套包名）",
+      "group": "home",
+      "reason": "部分固件把桌面放在这个包名下",
+      "default": true
+    },
+    {
+      "package": "com.netflix.ninja",
+      "name": "Netflix",
+      "group": "overseas",
+      "reason": "国外视频。默认保留，不放进底栏",
+      "default": false
+    },
+    {
+      "package": "com.amazon.amazonvideo.livingroom",
+      "name": "Prime Video",
+      "group": "overseas",
+      "reason": "国外视频。默认保留",
+      "default": false
+    },
+    {
+      "package": "com.google.android.youtube.tv",
+      "name": "YouTube 电视版",
+      "group": "overseas",
+      "reason": "国外视频。默认保留",
+      "default": false
+    },
+    {
+      "package": "com.google.android.youtube",
+      "name": "YouTube",
+      "group": "overseas",
+      "reason": "国外视频。默认保留",
+      "default": false
+    },
+    {
+      "package": "com.disney.disneyplus",
+      "name": "Disney+",
+      "group": "overseas",
+      "reason": "国外视频。默认保留",
+      "default": false
+    },
+    {
+      "package": "com.hulu.livingroomplus",
+      "name": "Hulu",
+      "group": "overseas",
+      "reason": "国外视频。默认保留",
+      "default": false
+    },
+    {
+      "package": "com.spotify.tv.android",
+      "name": "Spotify",
+      "group": "overseas",
+      "reason": "国外音乐。默认保留",
+      "default": false
+    },
+    {
+      "package": "com.netflix.mediaclient",
+      "name": "Netflix 手机版",
+      "group": "overseas",
+      "reason": "国外视频。默认保留",
+      "default": false
+    },
+    {
+      "package": "com.xiaomi.mitv.updateservice",
+      "name": "系统更新",
+      "group": "optional",
+      "reason": "停用后不会自动检查固件",
+      "default": false
+    },
+    {
+      "package": "com.xiaomi.mitv.upgrade",
+      "name": "系统升级",
+      "group": "optional",
+      "reason": "停用后不会自动升级系统",
+      "default": false
+    },
+    {
+      "package": "com.xiaomi.tv.appupgrade",
+      "name": "应用升级服务",
+      "group": "optional",
+      "reason": "停用后预装应用不再自己更新",
+      "default": false
+    },
+    {
+      "package": "com.xiaomi.mitv.tvmanager",
+      "name": "电视管家",
+      "group": "optional",
+      "reason": "清理和加速工具，平时可以不跑",
+      "default": false
+    },
+    {
+      "package": "com.xiaomi.mitv.handbook",
+      "name": "用户手册",
+      "group": "optional",
+      "reason": "说明书应用",
+      "default": false
+    },
+    {
+      "package": "com.xiaomi.mitv.calendar",
+      "name": "日历",
+      "group": "optional",
+      "reason": "系统日历",
+      "default": false
+    },
+    {
+      "package": "com.xiaomi.mitv.karaoke.service",
+      "name": "卡拉 OK",
+      "group": "optional",
+      "reason": "K 歌服务",
+      "default": false
+    },
+    {
+      "package": "com.xiaomi.mimusic2",
+      "name": "自带音乐",
+      "group": "optional",
+      "reason": "系统自带音乐播放器",
+      "default": false
+    }
+  ],
+  "keep": [
+    {
+      "package": "com.mitv.mivideoplayer",
+      "name": "小米播放器",
+      "reason": "国内片源要靠它解码，停了优酷和央视频会黑屏"
+    },
+    {
+      "package": "com.xiaomi.mitv.mediaexplorer",
+      "name": "高清播放器",
+      "reason": "本地和在线片源的播放组件"
+    },
+    {
+      "package": "com.xiaomi.mitv.tvplayer",
+      "name": "电视播放",
+      "reason": "直播和信号播放"
+    },
+    {
+      "package": "com.gitv.tv",
+      "name": "银河 GITV",
+      "reason": "状态栏上的牌照方。国内节目要靠这个牌照播出"
+    },
+    {
+      "package": "com.gitv.dvb",
+      "name": "银河直播",
+      "reason": "直播链路，和央视频、卫视直播有关"
+    },
+    {
+      "package": "com.xiaomi.mitv.appstore",
+      "name": "小米应用商店",
+      "reason": "用来安装云视听小电视、酷喵和央视频"
+    },
+    {
+      "package": "com.mitv.appstore",
+      "name": "应用商店",
+      "reason": "另一套应用商店包名，同样留着"
+    },
+    {
+      "package": "com.xiaomi.account",
+      "name": "小米账号",
+      "reason": "登录会员会用到"
+    },
+    {
+      "package": "com.xiaomi.account.auth",
+      "name": "账号授权",
+      "reason": "应用登录小米账号要用"
+    },
+    {
+      "package": "com.xiaomi.mitv.settings",
+      "name": "小米电视设置",
+      "reason": "系统设置本身"
+    },
+    {
+      "package": "com.android.tv.settings",
+      "name": "电视设置",
+      "reason": "网络、输入源、显示"
+    },
+    {
+      "package": "com.sohu.inputmethod.sogou.tv",
+      "name": "搜狗输入法",
+      "reason": "搜索影片时要打字"
+    },
+    {
+      "package": "com.xiaomi.mitv.smartshare",
+      "name": "无线投屏",
+      "reason": "手机投屏"
+    },
+    {
+      "package": "com.mitv.milinkservice",
+      "name": "米联",
+      "reason": "关于页里的「手机玩转小米电视」靠它"
+    },
+    {
+      "package": "com.xiaomi.mi_connect_service",
+      "name": "小米互联",
+      "reason": "手机和电视互相发现"
+    },
+    {
+      "package": "com.duokan.airkan.tvbox",
+      "name": "投屏服务",
+      "reason": "米联投屏的底层服务"
+    },
+    {
+      "package": "com.xiaomi.mitv.assistant.manual",
+      "name": "投屏助手",
+      "reason": "手机配合电视时的助手"
+    },
+    {
+      "package": "com.xiaomi.mitv.payment",
+      "name": "小米支付",
+      "reason": "在电视上开会员会用到"
+    },
+    {
+      "package": "com.xiaomi.mitv.pay",
+      "name": "电视支付",
+      "reason": "片源付费"
+    },
+    {
+      "package": "com.xiaomi.voicecontrol",
+      "name": "小爱语音",
+      "reason": "遥控器语音先留着"
+    },
+    {
+      "package": "com.xiaomi.mitv.voice",
+      "name": "小爱同学",
+      "reason": "另一套语音包名"
+    },
+    {
+      "package": "com.xiaomi.xiaoai",
+      "name": "小爱",
+      "reason": "语音助手"
+    },
+    {
+      "package": "com.android.bluetooth",
+      "name": "蓝牙",
+      "reason": "遥控器可能走蓝牙"
+    },
+    {
+      "package": "com.android.shell",
+      "name": "调试组件",
+      "reason": "停了就没法再连上电视做恢复"
+    }
+  ],
+  "stockHomes": [
+    "com.mitv.tvhome",
+    "com.mitv.tvhome.atv",
+    "com.google.android.tvlauncher",
+    "com.google.android.apps.tv.launcherx",
+    "com.xiaomi.mitv.tvhome"
+  ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">客厅净桌面</string>
+    <string name="inputs">输入源</string>
+    <string name="settings">设置</string>
+    <string name="network">网络</string>
+    <string name="home_key_label">客厅净桌面</string>
+    <string name="home_key_desc">主页键回到客厅净桌面。只有小米桌面仍占用主页键时才需要打开。</string>
+    <string name="dream_label">时钟</string>
+    <string name="hint">方向键移动，确定打开。按住设置可以换壁纸、选择主页应用。</string>
+    <string name="wallpaper">壁纸</string>
+    <string name="launcher_settings">桌面设置</string>
+    <string name="wallpaper_auto">开机换一张</string>
+    <string name="wallpaper_fixed">固定当前</string>
+    <string name="pinned_apps">主页应用</string>
+    <string name="add_pin">添加应用</string>
+    <string name="motion">动画</string>
+    <string name="motion_reduced">减弱</string>
+    <string name="motion_full">完整</string>
+    <string name="close">关闭</string>
+    <string name="all_apps">全部应用</string>
+    <string name="wallpaper_next">换壁纸</string>
+</resources>
